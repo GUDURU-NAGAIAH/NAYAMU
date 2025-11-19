@@ -1,0 +1,99 @@
+body {
+  text-align: center;
+  font-family: 'Segoe UI', 'Arial', sans-serif;
+  background: radial-gradient(ellipse at top right, #6a82fb 0%, #fc5c7d 100%);
+  min-height: 100vh;
+  color: #fff;
+  margin: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-top: 40px;
+  letter-spacing: 2px;
+}
+.blast {
+  color: #ffd700;
+  text-shadow: 0 0 8px #ff8347, 0 0 24px #fff;
+}
+
+.puzzle {
+  display: grid;
+  grid-template-columns: repeat(3, 80px);
+  grid-gap: 10px;
+  margin: 40px auto 20px auto;
+  width: max-content;
+  background: rgba(255,255,255,0.25);
+  border-radius: 20px;
+  box-shadow: 0 8px 40px #fff4;
+  padding: 30px 40px;
+}
+
+.tile {
+  font-size: 2rem;
+  background: linear-gradient(145deg, #ffecd2 10%, #fcb69f 95%);
+  color: #28313b;
+  border-radius: 16px;
+  cursor: pointer;
+  height: 80px;
+  width: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px #8f8bff28;
+  user-select: none;
+  transition: transform 0.13s, background 0.13s;
+  border: 3px solid #fff;
+}
+.tile:hover:not(.blank) {
+  background: linear-gradient(145deg, #fc466b, #3f5efb, #f9d423);
+  color: #fff;
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 4px 24px #fc466baa;
+}
+.tile.blank {
+  background: transparent;
+  border: 3px dashed #fff3;
+  cursor: default;
+}
+
+#shuffleBtn {
+  margin-top: 22px;
+  padding: 14px 38px;
+  font-size: 1.2rem;
+  border-radius: 28px;
+  background: linear-gradient(90deg, #ff9a9e 0%, #fad0c4 99%);
+  border: none;
+  color: #381769;
+  box-shadow: 0 2px 12px #eeaeca55;
+  transition: background 0.22s, color 0.22s, transform 0.13s;
+  cursor: pointer;
+  outline: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+#shuffleBtn:hover {
+  background: linear-gradient(90deg, #a18cd1 0%, #fbc2eb 100%);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+#message {
+  font-size: 1.3rem;
+  margin-top: 25px;
+  font-family: inherit;
+  font-weight: bold;
+  color: #fff700;
+  text-shadow: 0 0 9px #6a82fb44;
+}
+
+#confetti {
+  pointer-events: none;
+  position: fixed;
+  left: 0; top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  display: none;
+}
